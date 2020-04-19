@@ -7,7 +7,13 @@ sleep(1800)
 
 # The main program loop
 while true
-  current_scrape = scrape_grades
+  begin 
+    current_scrape = scrape_grades
+  rescue
+    send_error_email
+    next
+  end
+
   new_grades = current_scrape - last_scrape
 
   if new_grades.length != 0
@@ -15,7 +21,6 @@ while true
       send_email(grade)
     end
   end
-
   last_scrape = current_scrape
   sleep(1800)
 end
