@@ -40,6 +40,7 @@ end
 def send_error_email
   sender_email = ENV.fetch('SENDER_EMAIL')
   sender_email_password = ENV.fetch('SENDER_EMAIL_PASSWORD')
+  receiver_email = ENV.fetch('RECEIVER_EMAIL')
   message = 
   "From: Grade Notifier <#{sender_email}>
   \nTo: <#{receiver_email}>
