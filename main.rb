@@ -14,7 +14,7 @@ while true
     next
   end
 
-  new_grades = current_scrape - last_scrape
+  new_grades = current_scrape.to_a - last_scrape.to_a
 
   if new_grades.length != 0
     new_grades.each do |grade|
