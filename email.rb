@@ -26,10 +26,7 @@ def send_email(new_grade)
   \n<p>
     This email was genereated automatically. View the source code for this project at https://github.com/JeevenDhanoa/Grade-Notifier. 
   </p>"
-
-  p sender_email
-  p sender_email_password
-
+  
   smtp = Net::SMTP.new('smtp.gmail.com', 587)
   smtp.enable_starttls
   smtp.start('smtp.gmail.com', sender_email, sender_email_password, :login) do
