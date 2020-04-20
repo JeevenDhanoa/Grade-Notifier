@@ -11,6 +11,7 @@ while true
     current_scrape = scrape_grades
   rescue
     send_error_email
+    sleep(1800)
     next
   end
 

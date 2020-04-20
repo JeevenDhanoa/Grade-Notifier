@@ -1,4 +1,4 @@
-require 'Mechanize'
+require 'mechanize'
 require 'dotenv/load'
 
 #Scrape moodle and return a hash of completed courses and their associated grade
